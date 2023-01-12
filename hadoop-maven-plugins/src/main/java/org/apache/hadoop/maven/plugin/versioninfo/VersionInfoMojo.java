@@ -94,6 +94,9 @@ public class VersionInfoMojo extends AbstractMojo {
    * @return String representing current build time
    */
   private String getBuildTime() {
+    if (project.getProperties().getProperty("project.build.outputTimestamp") != null) {
+      return project.getProperties().getProperty("project.build.outputTimestamp");
+    }
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
     dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
     return dateFormat.format(new Date());
