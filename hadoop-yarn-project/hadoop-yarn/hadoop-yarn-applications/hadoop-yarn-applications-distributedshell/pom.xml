@@ -166,16 +166,16 @@
 
   <build>
     <plugins>
-      <plugin>
+      <!-- <plugin>
         <artifactId>maven-jar-plugin</artifactId>
         <executions>
           <execution>
             <goals>
               <goal>jar</goal>
-            </goals>
+            </goals> -->
             <!-- strictly speaking, the unit test is really a regression test. It
                  needs the main jar to be available to be able to run. -->
-            <phase>test-compile</phase>
+            <!-- <phase>test-compile</phase>
           </execution>
         </executions>
         <configuration>
@@ -184,7 +184,7 @@
                <mainClass>org.apache.hadoop.yarn.applications.distributedshell.Client</mainClass>
              </manifest>
            </archive>
-        </configuration>
+        </configuration> -->
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

@@ -162,10 +162,9 @@
                 <goals>
                   <goal>single</goal>
                 </goals>
-                <configuration>
+                <descriptors>
                   <descriptor>src/assembly/coprocessor.xml</descriptor>
-                  <attach>true</attach>
-                </configuration>
+                </descriptors>
               </execution>
             </executions>
           </plugin>
