@@ -184,8 +184,8 @@
                <mainClass>org.apache.hadoop.yarn.applications.distributedshell.Client</mainClass>
              </manifest>
            </archive>
-        </configuration> -->
-      </plugin>
+        </configuration>
+      </plugin> -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
