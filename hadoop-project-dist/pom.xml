@@ -376,7 +376,7 @@
                     <!-- Using Unix script to preserve symlinks -->
                     <echo file="${project.build.directory}/dist-maketar.sh">
                       cd "${project.build.directory}"
-                      tar cf - ${project.artifactId}-${project.version} --sort=name --owner=root:0 --group=root:0 --mtime='${project.build.outputTimestamp}' | gzip -n | gzip > ${project.artifactId}-${project.version}.tar.gz
+                      tar cf - ${project.artifactId}-${project.version} --sort=name --owner=root:0 --group=root:0 --mtime='${project.build.outputTimestamp}' | gzip -n > ${project.artifactId}-${project.version}.tar.gz
                     </echo>
                     <exec executable="${shell-executable}" dir="${project.build.directory}" failonerror="true">
                       <arg line="./dist-maketar.sh"/>
