@@ -21,6 +21,9 @@ VERSION=$1
 # project.build.directory
 BASEDIR=$2
 
+# Date used by the tar command
+OUTPUT_TIMESTAMP="${OUTPUT_TIMESTAMP:-`date`}"
+
 function run()
 {
   declare res
@@ -37,8 +40,8 @@ function run()
 }
 
 
-run tar cf "hadoop-${VERSION}.tar" "hadoop-${VERSION}"
-run gzip -f "hadoop-${VERSION}.tar"
+run tar cf "hadoop-${VERSION}.tar" "hadoop-${VERSION}" --sort=name --owner=root:0 --group=root:0 --mtime="${OUTPUT_TIMESTAMP}"
+run gzip -n -f "hadoop-${VERSION}.tar"
 echo
 echo "Hadoop dist tar available at: ${BASEDIR}/hadoop-${VERSION}.tar.gz"
 echo

@@ -207,6 +207,9 @@
                       <argument>${project.version}</argument>
                       <argument>${project.build.directory}</argument>
                     </arguments>
+                    <environmentVariables>
+                      <OUTPUT_TIMESTAMP>${project.build.outputTimestamp}</OUTPUT_TIMESTAMP>
+                    </environmentVariables>
                 </configuration>
               </execution>
             </executions>
